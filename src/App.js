@@ -8,10 +8,10 @@ import Post from "./Components/Post";
 function App() {
   return (
     <div>
-      <h1>Social Feed</h1>
-      <CreatePost />
-      {/* <DisplayPosts />
       <NavBar />
+      <CreatePost />
+
+      {/* <DisplayPosts />
       <Post /> */}
     </div>
   );

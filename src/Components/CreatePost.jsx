@@ -2,24 +2,53 @@
 
 import React, { useState } from "react";
 
-function CreatePost(props) {
+const CreatePost = (props) => {
+  const [post, setPost] = useState("");
+  const [userName, setUserName] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let newEntry = {
+      post: post,
+      userName: userName,
+    };
+    console.log(newEntry);
+    props.addNewPost(newEntry);
+  };
   return (
     <form
+      onSubmit={handleSubmit}
       action=""
       className="container border-box rounded col-6"
       style={{ marginTop: "4em" }}
     >
       <div className="form-group">
         <label htmlFor="">Name</label>
-        <input type="text" className="form-control" />
+        <input
+          type="text"
+          className="form-control"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+        />
       </div>
       <div className="form-group">
         <label htmlFor="">Post</label>
-        <textarea className="form-control" rows="3"></textarea>
+        <textarea
+          className="form-control"
+          rows="3"
+          value={post}
+          onChange={(e) => setPost(e.target.value)}
+        ></textarea>
       </div>
-      <button className="btn btn-primary">Create</button>
+      <button
+        type="submit"
+        className="btn btn-primary"
+        style={{ marginTop: "2em" }}
+      >
+        Create
+      </button>
     </form>
   );
-}
+};
 
 export default CreatePost;

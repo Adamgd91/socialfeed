@@ -3,13 +3,23 @@ import React, { useState } from "react";
 function DisplayPosts(props) {
   return (
     <div
-      className="container-fluid col-6 border-box rounded"
+      className="container-fluid col-md-6 border-box rounded"
       style={{ marginTop: "4em" }}
     >
-      <div className="row">
-        <div className="col-md-6">
-          <div>hello</div>
-        </div>
+      <div>
+        <h3>Post</h3>
+        <table className="table">
+          <tbody>
+            {props.parentEntries.map((entry, index) => {
+              return (
+                <tr key={index}>
+                  <td>{entry.post}</td>
+                  <td>{entry.userName}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </div>
     </div>
   );

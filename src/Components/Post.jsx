@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+// import DisplayPosts from "./DisplayPosts";
 
-function Post(props) {
-  return <div>Post</div>;
-}
+import React from "react";
+
+const Post = (props) => {
+  return <div></div>;
+};
 
 export default Post;

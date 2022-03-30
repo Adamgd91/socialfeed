@@ -10,8 +10,8 @@ function App() {
     <div>
       <NavBar />
       <CreatePost />
-
-      {/* <DisplayPosts />
+      <DisplayPosts />
+      {/* 
       <Post /> */}
     </div>
   );

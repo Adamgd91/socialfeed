@@ -1,3 +1,5 @@
+import "./style.css";
+
 import CreatePost from "./Components/CreatePost";
 import DisplayPosts from "./Components/DisplayPosts";
 import NavBar from "./Components/NavBar";
@@ -8,9 +10,9 @@ function App() {
     <div>
       <h1>Social Feed</h1>
       <CreatePost />
-      <DisplayPosts />
+      {/* <DisplayPosts />
       <NavBar />
-      <Post />
+      <Post /> */}
     </div>
   );
 }

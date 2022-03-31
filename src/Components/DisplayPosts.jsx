@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 function DisplayPosts(props) {
   return (
@@ -18,7 +18,24 @@ function DisplayPosts(props) {
               >
                 {entry.userName}
               </div>
-              <div>{entry.post}</div>
+              <div style={{ marginTop: "1em", marginBottom: "1em" }}>
+                {entry.post}
+              </div>
+              <div>
+                <button
+                  className="btn btn-secondary float-end"
+                  onClick="hi"
+                  style={{ marginTop: "-1em", marginLeft: "1em" }}
+                >
+                  Like
+                </button>
+                <button
+                  className="btn btn-secondary float-end"
+                  style={{ marginTop: "-1em" }}
+                >
+                  Dislike
+                </button>
+              </div>
             </div>
           );
         })}

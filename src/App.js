@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import CreatePost from "./Components/CreatePost";
 import DisplayPosts from "./Components/DisplayPosts";
 import NavBar from "./Components/NavBar";
-import Post from "./Components/Post";
 
 function App() {
   const [entries, setEntries] = useState([]);
@@ -19,7 +18,6 @@ function App() {
       <NavBar />
       <CreatePost addNewPost={addNewPosts} />
       <DisplayPosts parentEntries={entries} />
-      {/* <Post parentEntries={entries} /> */}
     </div>
   );
 }

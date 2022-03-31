@@ -5,8 +5,7 @@ import React, { useState } from "react";
 import CreatePost from "./Components/CreatePost";
 import DisplayPosts from "./Components/DisplayPosts";
 import NavBar from "./Components/NavBar";
-
-// import Post from "./Components/Post";
+import Post from "./Components/Post";
 
 function App() {
   const [entries, setEntries] = useState([]);

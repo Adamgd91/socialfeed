@@ -9,8 +9,8 @@ const CreatePost = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     let newEntry = {
-      post: post,
       userName: userName,
+      post: post,
     };
     console.log(newEntry);
     props.addNewPost(newEntry);

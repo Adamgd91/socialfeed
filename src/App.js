@@ -19,7 +19,7 @@ function App() {
       <NavBar />
       <CreatePost addNewPost={addNewPosts} />
       <DisplayPosts parentEntries={entries} />
-      {/* <Post /> */}
+      {/* <Post parentEntries={entries} /> */}
     </div>
   );
 }

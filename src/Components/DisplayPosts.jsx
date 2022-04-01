@@ -1,6 +1,23 @@
 import React, { useState } from "react";
 
 function DisplayPosts(props) {
+  const [buttonClass, setButtonClass] = useState("inactive");
+  const [dislikedButtonClass, setDislikedButtonClass] = useState("inactive");
+  const handleClick = () => {
+    if (buttonClass === "inactive") {
+      setButtonClass("liked");
+    } else {
+      setButtonClass("inactive");
+    }
+  };
+
+  const dislikedClick = () => {
+    if (dislikedButtonClass === "inactive") {
+      setDislikedButtonClass("dislike");
+    } else {
+      setDislikedButtonClass("inactive");
+    }
+  };
   return (
     <div
       className="container-fluid col-md-6 border-box rounded"
@@ -13,26 +30,23 @@ function DisplayPosts(props) {
           return (
             <div className="border-bottom border-dark" key={index}>
               <div
-                className="col-md-6"
-                style={{ marginTop: "1em", marginBottom: "1em" }}
+                className="col-md-6 bold"
+                style={{
+                  marginTop: "1em",
+                  marginBottom: "1em",
+                  fontWeight: "bold",
+                }}
               >
                 {entry.userName}
               </div>
               <div style={{ marginTop: "1em", marginBottom: "1em" }}>
                 {entry.post}
               </div>
-              <div>
-                <button
-                  className="btn btn-secondary float-end"
-                  onClick="hi"
-                  style={{ marginTop: "-1em", marginLeft: "1em" }}
-                >
+              <div className="btns">
+                <button className={buttonClass} onClick={handleClick}>
                   Like
                 </button>
-                <button
-                  className="btn btn-secondary float-end"
-                  style={{ marginTop: "-1em" }}
-                >
+                <button className={dislikedButtonClass} onClick={dislikedClick}>
                   Dislike
                 </button>
               </div>

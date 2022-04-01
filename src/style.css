@@ -16,6 +16,36 @@ body {
   padding: 2em;
 }
 
-#logo {
-  background-color: aqua;
+.liked {
+  background-color: rgb(85, 223, 58);
+  padding: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: black;
+  border-radius: 12%;
+  border-color: rgb(85, 223, 58);
+}
+
+.dislike {
+  background-color: rgb(203, 60, 60);
+  padding: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: black;
+  border-radius: 12%;
+  border-color: rgb(203, 60, 60);
+}
+
+.inactive {
+  background-color: rgb(53, 51, 51);
+  padding: 0.25em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: white;
+  border-radius: 12%;
+}
+
+.btns {
+  display: flex;
+  justify-content: right;
 }
